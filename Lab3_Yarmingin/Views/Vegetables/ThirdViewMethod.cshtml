@@ -1,0 +1,15 @@
+@model IEnumerable<IGrouping<char, Lab3_Yarmingin.Models.Vegetable>>
+
+<h2>Овощи, сгруппированные по первой букве</h2>
+
+@foreach (var group in Model)
+{
+    <h3>Буква '@group.Key'</h3>
+    <ul>
+        @foreach (var veg in group)
+        {
+            <li>@veg.Name</li>
+        }
+    </ul>
+}
+<p>@Html.ActionLink("Назад к списку", "FirstViewMethod", "Vegetables")</p>

@@ -1,0 +1,9 @@
+@model IEnumerable<Lab3_Yarmingin.Models.Vegetable>
+
+<h2>Список овощей</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>

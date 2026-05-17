@@ -1,0 +1,15 @@
+@model IEnumerable<Lab3_Yarmingin.Models.Vegetable>
+
+<h2>Отсортированные овощи (по алфавиту)</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr><th>Название</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr><td>@item.Name</td></tr>
+        }
+    </tbody>
+</table>
+<p>@Html.ActionLink("Назад к списку", "FirstViewMethod", "Vegetables")</p>
